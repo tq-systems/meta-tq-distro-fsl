@@ -1,0 +1,83 @@
+This README file contains information on the contents of the
+tq-distro-fsl layer.
+
+Please see the corresponding sections below for details.
+
+
+Dependencies
+============
+
+This layer depends on:
+
+  URI: https://git.yoctoproject.org/git/poky.git
+  leayers: meta, meta-poky
+  branch: krogoth
+
+  URI: https://github.com/openembedded/meta-openembedded.git
+  layers: meta-oe, meta-multimedia
+  branch: krogoth
+
+  URI: https://github.com/openembedded/meta-openembedded.git
+  layers: meta-oe, meta-multimedia
+  branch: krogoth
+
+  URI: https://github.com/Freescale/meta-fsl-arm.git
+  layers: meta-fsl-arm
+  branch: krogoth
+
+  URI: https://github.com/Freescale/meta-fsl-arm-extra.git
+  layers: meta-fsl-arm-extra
+  branch: krogoth
+
+  URI: https://github.com/Freescale/meta-fsl-arm-demos.git
+  layers: meta-fsl-arm-demos
+  branch: krogoth
+
+  URI: https://github.com/tq-systems/meta-tq.git
+  layers: meta-fsl-arm-demos
+  branch: krogoth
+
+Patches
+=======
+
+Please submit any patches against the tq-gui-demo layer to the
+
+Maintainer: Markus Niebel <Markus.Niebel@tq-group.com>
+
+
+Table of Contents
+=================
+
+  I. Adding the tq-gui-demo layer to your build
+
+
+I. Adding the tq-gui-demo layer to your build
+=================================================
+
+In order to use this layer, you need to make the build system aware of
+it.
+
+Assuming the tq-gui-demo layer exists at the top-level of your
+yocto build tree, you can add it to the build system by adding the
+location of the tq-gui-demo layer to bblayers.conf, along with any
+other layers needed. e.g.:
+
+BBLAYERS = " \
+  ${BSPDIR}/sources/poky/meta \
+  ${BSPDIR}/sources/poky/meta-poky \
+  \
+  ${BSPDIR}/sources/meta-openembedded/meta-oe \
+  ${BSPDIR}/sources/meta-openembedded/meta-multimedia \
+  \
+  ${BSPDIR}/sources/meta-fsl-arm \
+  ${BSPDIR}/sources/meta-fsl-arm-extra \
+  ${BSPDIR}/sources/meta-fsl-demos \
+  \
+  ${BSPDIR}/sources/meta-tq \
+  ${BSPDIR}/sources/meta-tq-distro-fsl \
+"
+
+II. Misc
+========
+
+TODO
